@@ -4,6 +4,618 @@
 #include QMK_KEYBOARD_H
 
 #if defined(RGB_MATRIX_ENABLE)
+// Explicit alias definitions CSx_SWy -> SWy_Csx
+#ifndef CS1_SW1
+#define CS1_SW1 SW1_CS1
+#endif
+#ifndef CS1_SW2
+#define CS1_SW2 SW2_CS1
+#endif
+#ifndef CS1_SW3
+#define CS1_SW3 SW3_CS1
+#endif
+#ifndef CS1_SW4
+#define CS1_SW4 SW4_CS1
+#endif
+#ifndef CS1_SW5
+#define CS1_SW5 SW5_CS1
+#endif
+#ifndef CS1_SW6
+#define CS1_SW6 SW6_CS1
+#endif
+#ifndef CS1_SW7
+#define CS1_SW7 SW7_CS1
+#endif
+#ifndef CS1_SW8
+#define CS1_SW8 SW8_CS1
+#endif
+#ifndef CS1_SW9
+#define CS1_SW9 SW9_CS1
+#endif
+#ifndef CS1_SW10
+#define CS1_SW10 SW10_CS1
+#endif
+#ifndef CS1_SW11
+#define CS1_SW11 SW11_CS1
+#endif
+
+#ifndef CS2_SW1
+#define CS2_SW1 SW1_CS2
+#endif
+#ifndef CS2_SW2
+#define CS2_SW2 SW2_CS2
+#endif
+#ifndef CS2_SW3
+#define CS2_SW3 SW3_CS2
+#endif
+#ifndef CS2_SW4
+#define CS2_SW4 SW4_CS2
+#endif
+#ifndef CS2_SW5
+#define CS2_SW5 SW5_CS2
+#endif
+#ifndef CS2_SW6
+#define CS2_SW6 SW6_CS2
+#endif
+#ifndef CS2_SW7
+#define CS2_SW7 SW7_CS2
+#endif
+#ifndef CS2_SW8
+#define CS2_SW8 SW8_CS2
+#endif
+#ifndef CS2_SW9
+#define CS2_SW9 SW9_CS2
+#endif
+#ifndef CS2_SW10
+#define CS2_SW10 SW10_CS2
+#endif
+#ifndef CS2_SW11
+#define CS2_SW11 SW11_CS2
+#endif
+
+#ifndef CS3_SW1
+#define CS3_SW1 SW1_CS3
+#endif
+#ifndef CS3_SW2
+#define CS3_SW2 SW2_CS3
+#endif
+#ifndef CS3_SW3
+#define CS3_SW3 SW3_CS3
+#endif
+#ifndef CS3_SW4
+#define CS3_SW4 SW4_CS3
+#endif
+#ifndef CS3_SW5
+#define CS3_SW5 SW5_CS3
+#endif
+#ifndef CS3_SW6
+#define CS3_SW6 SW6_CS3
+#endif
+#ifndef CS3_SW7
+#define CS3_SW7 SW7_CS3
+#endif
+#ifndef CS3_SW8
+#define CS3_SW8 SW8_CS3
+#endif
+#ifndef CS3_SW9
+#define CS3_SW9 SW9_CS3
+#endif
+#ifndef CS3_SW10
+#define CS3_SW10 SW10_CS3
+#endif
+#ifndef CS3_SW11
+#define CS3_SW11 SW11_CS3
+#endif
+
+#ifndef CS4_SW1
+#define CS4_SW1 SW1_CS4
+#endif
+#ifndef CS4_SW2
+#define CS4_SW2 SW2_CS4
+#endif
+#ifndef CS4_SW3
+#define CS4_SW3 SW3_CS4
+#endif
+#ifndef CS4_SW4
+#define CS4_SW4 SW4_CS4
+#endif
+#ifndef CS4_SW5
+#define CS4_SW5 SW5_CS4
+#endif
+#ifndef CS4_SW6
+#define CS4_SW6 SW6_CS4
+#endif
+#ifndef CS4_SW7
+#define CS4_SW7 SW7_CS4
+#endif
+#ifndef CS4_SW8
+#define CS4_SW8 SW8_CS4
+#endif
+#ifndef CS4_SW9
+#define CS4_SW9 SW9_CS4
+#endif
+#ifndef CS4_SW10
+#define CS4_SW10 SW10_CS4
+#endif
+#ifndef CS4_SW11
+#define CS4_SW11 SW11_CS4
+#endif
+
+#ifndef CS5_SW1
+#define CS5_SW1 SW1_CS5
+#endif
+#ifndef CS5_SW2
+#define CS5_SW2 SW2_CS5
+#endif
+#ifndef CS5_SW3
+#define CS5_SW3 SW3_CS5
+#endif
+#ifndef CS5_SW4
+#define CS5_SW4 SW4_CS5
+#endif
+#ifndef CS5_SW5
+#define CS5_SW5 SW5_CS5
+#endif
+#ifndef CS5_SW6
+#define CS5_SW6 SW6_CS5
+#endif
+#ifndef CS5_SW7
+#define CS5_SW7 SW7_CS5
+#endif
+#ifndef CS5_SW8
+#define CS5_SW8 SW8_CS5
+#endif
+#ifndef CS5_SW9
+#define CS5_SW9 SW9_CS5
+#endif
+#ifndef CS5_SW10
+#define CS5_SW10 SW10_CS5
+#endif
+#ifndef CS5_SW11
+#define CS5_SW11 SW11_CS5
+#endif
+
+#ifndef CS6_SW1
+#define CS6_SW1 SW1_CS6
+#endif
+#ifndef CS6_SW2
+#define CS6_SW2 SW2_CS6
+#endif
+#ifndef CS6_SW3
+#define CS6_SW3 SW3_CS6
+#endif
+#ifndef CS6_SW4
+#define CS6_SW4 SW4_CS6
+#endif
+#ifndef CS6_SW5
+#define CS6_SW5 SW5_CS6
+#endif
+#ifndef CS6_SW6
+#define CS6_SW6 SW6_CS6
+#endif
+#ifndef CS6_SW7
+#define CS6_SW7 SW7_CS6
+#endif
+#ifndef CS6_SW8
+#define CS6_SW8 SW8_CS6
+#endif
+#ifndef CS6_SW9
+#define CS6_SW9 SW9_CS6
+#endif
+#ifndef CS6_SW10
+#define CS6_SW10 SW10_CS6
+#endif
+#ifndef CS6_SW11
+#define CS6_SW11 SW11_CS6
+#endif
+
+#ifndef CS7_SW1
+#define CS7_SW1 SW1_CS7
+#endif
+#ifndef CS7_SW2
+#define CS7_SW2 SW2_CS7
+#endif
+#ifndef CS7_SW3
+#define CS7_SW3 SW3_CS7
+#endif
+#ifndef CS7_SW4
+#define CS7_SW4 SW4_CS7
+#endif
+#ifndef CS7_SW5
+#define CS7_SW5 SW5_CS7
+#endif
+#ifndef CS7_SW6
+#define CS7_SW6 SW6_CS7
+#endif
+#ifndef CS7_SW7
+#define CS7_SW7 SW7_CS7
+#endif
+#ifndef CS7_SW8
+#define CS7_SW8 SW8_CS7
+#endif
+#ifndef CS7_SW9
+#define CS7_SW9 SW9_CS7
+#endif
+#ifndef CS7_SW10
+#define CS7_SW10 SW10_CS7
+#endif
+#ifndef CS7_SW11
+#define CS7_SW11 SW11_CS7
+#endif
+
+#ifndef CS8_SW1
+#define CS8_SW1 SW1_CS8
+#endif
+#ifndef CS8_SW2
+#define CS8_SW2 SW2_CS8
+#endif
+#ifndef CS8_SW3
+#define CS8_SW3 SW3_CS8
+#endif
+#ifndef CS8_SW4
+#define CS8_SW4 SW4_CS8
+#endif
+#ifndef CS8_SW5
+#define CS8_SW5 SW5_CS8
+#endif
+#ifndef CS8_SW6
+#define CS8_SW6 SW6_CS8
+#endif
+#ifndef CS8_SW7
+#define CS8_SW7 SW7_CS8
+#endif
+#ifndef CS8_SW8
+#define CS8_SW8 SW8_CS8
+#endif
+#ifndef CS8_SW9
+#define CS8_SW9 SW9_CS8
+#endif
+#ifndef CS8_SW10
+#define CS8_SW10 SW10_CS8
+#endif
+#ifndef CS8_SW11
+#define CS8_SW11 SW11_CS8
+#endif
+
+#ifndef CS9_SW1
+#define CS9_SW1 SW1_CS9
+#endif
+#ifndef CS9_SW2
+#define CS9_SW2 SW2_CS9
+#endif
+#ifndef CS9_SW3
+#define CS9_SW3 SW3_CS9
+#endif
+#ifndef CS9_SW4
+#define CS9_SW4 SW4_CS9
+#endif
+#ifndef CS9_SW5
+#define CS9_SW5 SW5_CS9
+#endif
+#ifndef CS9_SW6
+#define CS9_SW6 SW6_CS9
+#endif
+#ifndef CS9_SW7
+#define CS9_SW7 SW7_CS9
+#endif
+#ifndef CS9_SW8
+#define CS9_SW8 SW8_CS9
+#endif
+#ifndef CS9_SW9
+#define CS9_SW9 SW9_CS9
+#endif
+#ifndef CS9_SW10
+#define CS9_SW10 SW10_CS9
+#endif
+#ifndef CS9_SW11
+#define CS9_SW11 SW11_CS9
+#endif
+
+#ifndef CS10_SW1
+#define CS10_SW1 SW1_CS10
+#endif
+#ifndef CS10_SW2
+#define CS10_SW2 SW2_CS10
+#endif
+#ifndef CS10_SW3
+#define CS10_SW3 SW3_CS10
+#endif
+#ifndef CS10_SW4
+#define CS10_SW4 SW4_CS10
+#endif
+#ifndef CS10_SW5
+#define CS10_SW5 SW5_CS10
+#endif
+#ifndef CS10_SW6
+#define CS10_SW6 SW6_CS10
+#endif
+#ifndef CS10_SW7
+#define CS10_SW7 SW7_CS10
+#endif
+#ifndef CS10_SW8
+#define CS10_SW8 SW8_CS10
+#endif
+#ifndef CS10_SW9
+#define CS10_SW9 SW9_CS10
+#endif
+#ifndef CS10_SW10
+#define CS10_SW10 SW10_CS10
+#endif
+#ifndef CS10_SW11
+#define CS10_SW11 SW11_CS10
+#endif
+
+#ifndef CS11_SW1
+#define CS11_SW1 SW1_CS11
+#endif
+#ifndef CS11_SW2
+#define CS11_SW2 SW2_CS11
+#endif
+#ifndef CS11_SW3
+#define CS11_SW3 SW3_CS11
+#endif
+#ifndef CS11_SW4
+#define CS11_SW4 SW4_CS11
+#endif
+#ifndef CS11_SW5
+#define CS11_SW5 SW5_CS11
+#endif
+#ifndef CS11_SW6
+#define CS11_SW6 SW6_CS11
+#endif
+#ifndef CS11_SW7
+#define CS11_SW7 SW7_CS11
+#endif
+#ifndef CS11_SW8
+#define CS11_SW8 SW8_CS11
+#endif
+#ifndef CS11_SW9
+#define CS11_SW9 SW9_CS11
+#endif
+#ifndef CS11_SW10
+#define CS11_SW10 SW10_CS11
+#endif
+#ifndef CS11_SW11
+#define CS11_SW11 SW11_CS11
+#endif
+
+#ifndef CS12_SW1
+#define CS12_SW1 SW1_CS12
+#endif
+#ifndef CS12_SW2
+#define CS12_SW2 SW2_CS12
+#endif
+#ifndef CS12_SW3
+#define CS12_SW3 SW3_CS12
+#endif
+#ifndef CS12_SW4
+#define CS12_SW4 SW4_CS12
+#endif
+#ifndef CS12_SW5
+#define CS12_SW5 SW5_CS12
+#endif
+#ifndef CS12_SW6
+#define CS12_SW6 SW6_CS12
+#endif
+#ifndef CS12_SW7
+#define CS12_SW7 SW7_CS12
+#endif
+#ifndef CS12_SW8
+#define CS12_SW8 SW8_CS12
+#endif
+#ifndef CS12_SW9
+#define CS12_SW9 SW9_CS12
+#endif
+#ifndef CS12_SW10
+#define CS12_SW10 SW10_CS12
+#endif
+#ifndef CS12_SW11
+#define CS12_SW11 SW11_CS12
+#endif
+
+#ifndef CS13_SW1
+#define CS13_SW1 SW1_CS13
+#endif
+#ifndef CS13_SW2
+#define CS13_SW2 SW2_CS13
+#endif
+#ifndef CS13_SW3
+#define CS13_SW3 SW3_CS13
+#endif
+#ifndef CS13_SW4
+#define CS13_SW4 SW4_CS13
+#endif
+#ifndef CS13_SW5
+#define CS13_SW5 SW5_CS13
+#endif
+#ifndef CS13_SW6
+#define CS13_SW6 SW6_CS13
+#endif
+#ifndef CS13_SW7
+#define CS13_SW7 SW7_CS13
+#endif
+#ifndef CS13_SW8
+#define CS13_SW8 SW8_CS13
+#endif
+#ifndef CS13_SW9
+#define CS13_SW9 SW9_CS13
+#endif
+#ifndef CS13_SW10
+#define CS13_SW10 SW10_CS13
+#endif
+#ifndef CS13_SW11
+#define CS13_SW11 SW11_CS13
+#endif
+
+#ifndef CS14_SW1
+#define CS14_SW1 SW1_CS14
+#endif
+#ifndef CS14_SW2
+#define CS14_SW2 SW2_CS14
+#endif
+#ifndef CS14_SW3
+#define CS14_SW3 SW3_CS14
+#endif
+#ifndef CS14_SW4
+#define CS14_SW4 SW4_CS14
+#endif
+#ifndef CS14_SW5
+#define CS14_SW5 SW5_CS14
+#endif
+#ifndef CS14_SW6
+#define CS14_SW6 SW6_CS14
+#endif
+#ifndef CS14_SW7
+#define CS14_SW7 SW7_CS14
+#endif
+#ifndef CS14_SW8
+#define CS14_SW8 SW8_CS14
+#endif
+#ifndef CS14_SW9
+#define CS14_SW9 SW9_CS14
+#endif
+#ifndef CS14_SW10
+#define CS14_SW10 SW10_CS14
+#endif
+#ifndef CS14_SW11
+#define CS14_SW11 SW11_CS14
+#endif
+
+#ifndef CS15_SW1
+#define CS15_SW1 SW1_CS15
+#endif
+#ifndef CS15_SW2
+#define CS15_SW2 SW2_CS15
+#endif
+#ifndef CS15_SW3
+#define CS15_SW3 SW3_CS15
+#endif
+#ifndef CS15_SW4
+#define CS15_SW4 SW4_CS15
+#endif
+#ifndef CS15_SW5
+#define CS15_SW5 SW5_CS15
+#endif
+#ifndef CS15_SW6
+#define CS15_SW6 SW6_CS15
+#endif
+#ifndef CS15_SW7
+#define CS15_SW7 SW7_CS15
+#endif
+#ifndef CS15_SW8
+#define CS15_SW8 SW8_CS15
+#endif
+#ifndef CS15_SW9
+#define CS15_SW9 SW9_CS15
+#endif
+#ifndef CS15_SW10
+#define CS15_SW10 SW10_CS15
+#endif
+#ifndef CS15_SW11
+#define CS15_SW11 SW11_CS15
+#endif
+
+#ifndef CS16_SW1
+#define CS16_SW1 SW1_CS16
+#endif
+#ifndef CS16_SW2
+#define CS16_SW2 SW2_CS16
+#endif
+#ifndef CS16_SW3
+#define CS16_SW3 SW3_CS16
+#endif
+#ifndef CS16_SW4
+#define CS16_SW4 SW4_CS16
+#endif
+#ifndef CS16_SW5
+#define CS16_SW5 SW5_CS16
+#endif
+#ifndef CS16_SW6
+#define CS16_SW6 SW6_CS16
+#endif
+#ifndef CS16_SW7
+#define CS16_SW7 SW7_CS16
+#endif
+#ifndef CS16_SW8
+#define CS16_SW8 SW8_CS16
+#endif
+#ifndef CS16_SW9
+#define CS16_SW9 SW9_CS16
+#endif
+#ifndef CS16_SW10
+#define CS16_SW10 SW10_CS16
+#endif
+#ifndef CS16_SW11
+#define CS16_SW11 SW11_CS16
+#endif
+
+#ifndef CS17_SW1
+#define CS17_SW1 SW1_CS17
+#endif
+#ifndef CS17_SW2
+#define CS17_SW2 SW2_CS17
+#endif
+#ifndef CS17_SW3
+#define CS17_SW3 SW3_CS17
+#endif
+#ifndef CS17_SW4
+#define CS17_SW4 SW4_CS17
+#endif
+#ifndef CS17_SW5
+#define CS17_SW5 SW5_CS17
+#endif
+#ifndef CS17_SW6
+#define CS17_SW6 SW6_CS17
+#endif
+#ifndef CS17_SW7
+#define CS17_SW7 SW7_CS17
+#endif
+#ifndef CS17_SW8
+#define CS17_SW8 SW8_CS17
+#endif
+#ifndef CS17_SW9
+#define CS17_SW9 SW9_CS17
+#endif
+#ifndef CS17_SW10
+#define CS17_SW10 SW10_CS17
+#endif
+#ifndef CS17_SW11
+#define CS17_SW11 SW11_CS17
+#endif
+
+#ifndef CS18_SW1
+#define CS18_SW1 SW1_CS18
+#endif
+#ifndef CS18_SW2
+#define CS18_SW2 SW2_CS18
+#endif
+#ifndef CS18_SW3
+#define CS18_SW3 SW3_CS18
+#endif
+#ifndef CS18_SW4
+#define CS18_SW4 SW4_CS18
+#endif
+#ifndef CS18_SW5
+#define CS18_SW5 SW5_CS18
+#endif
+#ifndef CS18_SW6
+#define CS18_SW6 SW6_CS18
+#endif
+#ifndef CS18_SW7
+#define CS18_SW7 SW7_CS18
+#endif
+#ifndef CS18_SW8
+#define CS18_SW8 SW8_CS18
+#endif
+#ifndef CS18_SW9
+#define CS18_SW9 SW9_CS18
+#endif
+#ifndef CS18_SW10
+#define CS18_SW10 SW10_CS18
+#endif
+#ifndef CS18_SW11
+#define CS18_SW11 SW11_CS18
+#endif
 #define CS19_SW12 0x00
 #define CS20_SW12 0x01
 #define CS21_SW12 0x02
@@ -176,7 +788,7 @@
 #define CS36_SW20 0xA1
 
 // TODO: Should have attribute __flash. But won't compile if I add it
-const is31_led g_is31_leds[RGB_MATRIX_LED_COUNT] = {
+const is31fl3743a_led_t PROGMEM g_is31fl3743a_leds[IS31FL3743A_LED_COUNT] = {
 /* Refer to IS31 manual for these locations
  *   driver
  *   |    R location

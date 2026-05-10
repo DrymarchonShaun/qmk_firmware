@@ -29,7 +29,8 @@
 // #define PICO_FL16
 
 // Enable serial number. Calls into dyn_serial_number_string* functions
-#define SERIAL_NUMBER
+// Note: Do not define SERIAL_NUMBER as an empty macro when using dynamic serial
+// #define SERIAL_NUMBER
 
 #if KEYBOARD_framework_ansi
 #    define LED_CAPS_LOCK_PIN GP24

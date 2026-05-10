@@ -6,11 +6,9 @@
 #include "matrix.h"
 #include "factory.h"
 #include "framework.h"
+#include "dyn_serial.h"
 #if defined(RGB_MATRIX_ENABLE)
 #include "rgb_matrix.h"
-#endif
-#ifdef SERIAL_NUMBER
-#include "dyn_serial.h"
 #endif
 
 enum factory_commands {
@@ -22,15 +20,8 @@ enum factory_commands {
 };
 
 #if defined(RGB_MATRIX_ENABLE)
-extern uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS];
-
 void emulate_rgb_keycode_press(uint16_t target_keycode) {
-    for (uint8_t row = 0; row < MATRIX_ROWS; row++) {
-        for (uint8_t col = 0; col < MATRIX_COLS; col++) {
-            uint16_t keycode = keymaps[0][row][col];
-            process_rgb_matrix(row, col, keycode == target_keycode);
-        }
-    }
+    tap_code(target_keycode);
 }
 #endif
 
