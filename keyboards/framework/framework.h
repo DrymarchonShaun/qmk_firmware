@@ -19,6 +19,10 @@
     #include "macropad.h"
 #endif
 
+#ifndef KC_AIRP
+#    define KC_AIRP KC_NO
+#endif
+
 enum framework_keycodes {
   // Custom keycode to change screen modes (e.g. enable external screen)
   KC_SCRN = SAFE_RANGE,

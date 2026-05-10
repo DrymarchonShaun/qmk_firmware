@@ -4,7 +4,9 @@
 #include QMK_KEYBOARD_H
 
 #if defined(RGB_MATRIX_ENABLE)
-const is31_led g_is31_leds[RGB_MATRIX_LED_COUNT] = {
+#include "../is31fl3743a_aliases.h"
+
+const is31fl3743a_led_t PROGMEM g_is31fl3743a_leds[RGB_MATRIX_LED_COUNT] = {
 /* Refer to IS31 manual for these locations
  *   driver
  *   |   R location
